@@ -31,7 +31,6 @@ if (document.getElementById('panier-container')) {
         panierContainer.innerHTML = '<p>Votre panier est vide.</p>';
     } else {
         let total = 0;
-
         // Afficher chaque produit dans le panier
         panier.forEach((produit, index) => {
             const produitElement = document.createElement('div');
@@ -55,6 +54,10 @@ function supprimerProduit(index) {
     const panier = JSON.parse(localStorage.getItem('panier')) || [];
     panier.splice(index, 1); // Supprimer le produit à l'index donné
     localStorage.setItem('panier', JSON.stringify(panier)); // Mettre à jour localStorage
+    let tot = localStorage.getItem("localPanier");
+    if(tot===null)
+        tot=0;
+    localStorage.setItem("totalPanier",tot);
     location.reload(); // Recharger la page pour mettre à jour l'affichage
 }
 
