@@ -1,0 +1,301 @@
+/* Styles globaux */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* En-tête */
+header {
+    background-color: #00796b; /* Couleur de fond de l'en-tête */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement intérieur */
+    display: flex; /* Utilisation de flexbox pour le layout */
+    align-items: center; /* Alignement vertical */
+    justify-content: space-between; /* Espacement entre logo et menu */
+    flex-wrap: wrap; /* Permet le passage à la ligne si nécessaire */
+    position: relative; /* Position relative pour un éventuel positionnement absolu */
+    max-height: 80px; /* Ajustez cette valeur selon vos besoins */
+    overflow: hidden; /* Cache le débordement */
+}
+
+header .logo {
+    width: 120px; /* Largeur du logo */
+}
+
+header .logoSM {
+    width: 150px; /* Largeur du logo */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none; /* Supprime les puces */
+    margin: 0; /* Supprime la marge */
+    padding: 0; /* Supprime le padding */
+    display: flex; /* Affiche les éléments en ligne */
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+nav ul li {
+    margin: 0; /* Supprime la marge */
+}
+
+nav ul li a {
+    color: white; /* Couleur du texte des liens */
+    font-weight: bold; /* Gras */
+    padding: 10px 15px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition douce pour le hover */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de fond au survol */
+}
+
+/* Section principale */
+main {
+    padding: 40px 20px; /* Espacement autour du contenu principal */
+    text-align: center; /* Centre le texte */
+}
+
+main h1 {
+    font-size: 2.5em; /* Taille du titre principal */
+    margin-bottom: 10px; /* Marge en bas */
+    color: #00796b; /* Couleur du titre principal */
+}
+
+main h2 {
+    font-size: 1.8em; /* Taille du sous-titre */
+    margin-bottom: 20px; /* Marge en bas */
+    color: #333; /* Couleur du sous-titre */
+}
+
+main p {
+    font-size: 1.2em; /* Taille du texte */
+    margin-bottom: 20px; /* Marge en bas */
+    color: #555; /* Couleur du texte */
+}
+
+.button {
+    display: inline-block; /* Affichage en bloc pour le bouton */
+    background-color: #00796b; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 15px 36px;
+    font-size: 1em; /* Taille de la police */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition douce pour les effets */
+    vertical-align: middle;
+}
+
+.button:hover {
+    background-color: #004d40; /* Couleur de fond au survol */
+    transform: scale(1.05); /* Agrandissement au survol */
+}
+
+/* Formulaire de contact */
+form {
+    max-width: 410px; /* Limite la largeur du formulaire */
+    margin: 20px auto; /* Centre le formulaire horizontalement */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond du formulaire */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre autour du formulaire */
+}
+
+form div {
+    margin-bottom: 15px; /* Espace entre les champs du formulaire */
+}
+
+label {
+    display: block; /* Affiche le label sur une nouvelle ligne */
+    margin-bottom: 5px; /* Espace entre le label et le champ */
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    padding: 10px; /* Espace interne dans les champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 4px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+button {
+    background-color: #00796b; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 15px; /* Espace interne du bouton */
+    border: none; /* Pas de bordure */
+    border-radius: 4px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur en main au survol */
+    transition: background-color 0.3s ease; /* Transition pour le survol */
+}
+
+button:hover {
+    background-color: #004d40; /* Couleur de fond au survol */
+}
+
+/* Produits */
+.product {
+    display: flex; /* Utilisation de flexbox pour les produits */
+    flex-direction: column; /* Alignement vertical */
+    align-items: center; /* Centrage horizontal */
+    background: white; /* Couleur de fond des produits */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    margin: 20px auto; /* Marge automatique pour centrer */
+    max-width: 500px; /* Largeur maximum des produits */
+}
+
+.product h2 {
+    color: #00796b; /* Couleur du titre produit */
+    margin-bottom: 10px; /* Marge en bas */
+}
+
+.product p {
+    font-size: 1em; /* Taille du texte produit */
+    color: #555; /* Couleur du texte */
+}
+
+/* Pied de page */
+footer {
+    background-color: #333; /* Couleur de fond du pied de page */
+    color: #ddd; /* Couleur du texte */
+    text-align: center; /* Centre le texte */
+    padding: 20px 0; /* Espacement vertical */
+    font-size: 0.9em; /* Taille du texte */
+    margin-top: 40px; /* Marge au-dessus */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Colonne sur petits écrans */
+        text-align: center; /* Centre le texte */
+    }
+
+    nav ul {
+        flex-direction: column; /* Colonne pour la navigation sur petits écrans */
+        gap: 10px; /* Espacement entre les éléments */
+    }
+
+    .product {
+        margin: 20px 10px; /* Ajuste la marge pour les produits */
+    }
+}
+
+.social-media strong {
+    color: #00796b; /* Couleur pour correspondre à votre thème */
+}
+
+/* Partenaires Section */
+.partenaires {
+    display: flex;
+    justify-content: space-around; /* Répartir uniformément les logos */
+    align-items: center; /* Centrer les éléments verticalement */
+    flex-wrap: wrap; /* Permettre le passage à la ligne sur les petits écrans */
+    margin-top: 20px;
+}
+
+.partenaire {
+    text-align: center;
+    margin: 0 20px; /* Marge égale à gauche et à droite */
+    flex: 1; /* Permet une espacement égal */
+}
+
+.logo-partenaire {
+    width: 150px; /* Largeur uniforme pour les logos */
+    height: 150px; /* Hauteur uniforme pour les logos */
+    object-fit: contain; /* Maintenir le rapport d'aspect */
+    display: block;
+    margin: 0 auto 10px; /* Centrer les logos avec marge */
+}
+
+.partenaire p {
+    font-weight: bold; /* Mettre les noms des partenaires en gras */
+}
+
+.partenaire a {
+    color: #00796b; /* Changer la couleur des liens */
+    text-decoration: none; /* Supprimer le soulignement */
+}
+
+.partenaire a:hover {
+    text-decoration: underline; /* Souligner au survol */
+}
+
+/* Icônes */
+.Ic_r {
+    width: 20px; /* Largeur de l'image */
+    height: 20px; /* Hauteur de l'image */
+    margin-right: 8px; /* Espace entre l'image et le texte */
+    vertical-align: middle; /* Alignement vertical */
+}
+
+/* Style des champs d'entrée */
+input[type="text"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus {
+    outline: none;
+    border-color: #00796b; /* Ajout d'un effet au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#pay-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#pay-button:hover {
+    background-color: #00796b;
+}
+
+.secure-icons {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.secure-icons img {
+    margin: 0 5px;
+    height: 30px;
+}
+.ec{
+    max-width: 100%;
+}
+
+.mail strong{
+    color: #004d40;
+    font: size 50px; ;
+}

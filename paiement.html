@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement Sécurisé</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <header>
+        <img src="logo_ctp.png" alt="Logo ClicToPay" class="logo">
+    </header>
+    <main>
+        <h1>Numéro de la commande №SNZAZH1459</h1>
+        <p>Il reste jusqu'à la fin de la session <span id="countdown"></span></p>
+        <form id="payment-form" action="process_paiement.php" method="post">
+            <!-- Section Total -->
+            <div>
+                <p>Total du panier : <span id="cart-total">0.00</span></p>
+
+            </div>
+            
+            <!-- Section Numéro de carte -->
+            <div>
+                <label for="card-number">Numéro de la carte</label>
+                <input 
+                    type="text" 
+                    id="card-number" 
+                    name="card-number" 
+                    class="ec"
+                    placeholder="Numéro de la carte" 
+                    pattern="[0-9]{16}" 
+                    title="Le numéro de carte doit contenir exactement 16 chiffres." 
+                    required
+                >
+            </div>
+
+            <!-- Section Date d'expiration et Code de sûreté -->
+            <div style="display: flex; gap: 10px;">
+                <div>
+                    <label for="month">Mois</label>
+                    <select id="month" name="month" required>
+                        <option value="">Mois</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="year">Année</label>
+                    <select id="year" name="year" required>
+                        <option value="">Année</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cvc">Code de sûreté</label>
+                    <input 
+                        type="text" 
+                        id="cvc" 
+                        name="cvc" 
+                        placeholder="CVC" 
+                        pattern="[0-9]{3}" 
+                        title="Le code de sûreté doit contenir exactement 3 chiffres." 
+                        required
+                    >
+                </div>
+            </div>
+
+            <!-- Section Nom du détenteur -->
+            <div>
+                <label for="name">Le nom du détenteur</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="ec"
+                    placeholder="Le nom du détenteur" 
+                    required
+                >
+            </div>
+
+            <!-- Section Email -->
+            <div>
+                <label for="email">Adresse e-mail</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    class="ec"
+                    name="email" 
+                    placeholder="Votre e-mail" 
+                    required
+                >
+            </div>
+
+            <!-- Section Conditions d'utilisation -->
+            <div>
+                <input 
+                    type="checkbox" 
+                    id="accept-terms" 
+                    name="accept-terms" 
+                    required
+                >
+                <label for="accept-terms">J'accepte les conditions d'utilisation</label>
+            </div>
+
+            <!-- Bouton de paiement -->
+            <button type="submit" id="pay-button" class="button">Paiement 0.00 </button>
+        </form>
+
+        <!-- Message de succès -->
+        <p id="payment-message" style="display:none; color: green; font-weight: bold;"></p>
+    </main>
+    <footer>
+        <p>Paiement sécurisé</p>
+        <div class="secure-icons">
+            <img src="Ic_Ps.png">
+        </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
